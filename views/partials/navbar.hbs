@@ -1,0 +1,18 @@
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Incanto</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+          {{#if isHome}}
+        <li class="active"><a href="/">Головна</a></li>
+        {{else}}<li><a href="/">Головна</a></li>{{/if}}
+        {{#if isCourse}}
+        <li class="active"><a href="/course">Course</a></li>
+        {{else}}<li><a href="/course">Course</a></li>
+        {{/if}}
+        {{#if isAdd}}
+        <li class="active"><a href="/add">Add course</a></li>
+        {{else}}<li><a href="/add">Add course</a></li>{{/if}}
+      </ul>
+    </div>
+  </nav>
