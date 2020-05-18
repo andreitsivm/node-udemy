@@ -16,6 +16,7 @@ app.set('view engine','hbs')
 // ===================================================================
 // статична папка 
 app.use(express.static('public')) 
+app.use(express.urlencoded({extended:true}))
 // роути 
 app.use('/',homeRoutes)
 app.use('/add',addRoutes)
@@ -23,7 +24,7 @@ app.use('/course',courseRoutes)
 
 app.set('views','views')
 
-PORT=process.env.PORT||3000
+PORT=process.env.PORT||3001
 app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`)
 })
